@@ -35,7 +35,7 @@
               HATTA
             </h1>
             <p class="text-2xl md:text-3xl text-gray-100 font-light drop-shadow-lg">
-              Full-Stack Developer from Malaysia
+              Hatta budak baik, tolong jangan ganggu dia
             </p>
           </div>
 
@@ -84,7 +84,7 @@
               </div>
 
               <p class="text-xl text-gray-200 leading-relaxed">
-                I'm Hatta, a passionate developer from Malaysia who loves crafting digital experiences that make a difference. With expertise in modern web technologies, I bridge the gap between design and functionality.
+                Fresh graduate in Computer Science (Software Engineering) from UMPSA with hands-on experience in full-stack development, UI/UX design, data Analyst, and software Analyst. Also experienced in developing end-to-end systems, integrating complex technologies, and delivering impactful digital solutions grounded in real-world use cases.
               </p>
 
               <div class="grid grid-cols-2 gap-6">
@@ -94,16 +94,16 @@
                 </div>
                 <div class="space-y-2">
                   <h3 class="text-purple-400 font-semibold">Focus</h3>
-                  <p class="text-gray-200">Full-Stack Development</p>
+                  <p class="text-gray-200">Frontend Development</p>
                 </div>
               </div>
             </div>
 
             <div class="relative">
-              <div class="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-purple-500/30 to-pink-500/30 backdrop-blur-sm border border-purple-500/50 flex items-center justify-center">
-                <div class="text-6xl">👨‍💻</div>
-              </div>
-              <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 blur-xl"></div>
+                <div class="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-purple-500/30 to-pink-500/30 backdrop-blur-sm border border-purple-500/50 flex items-center justify-center overflow-hidden">
+                    <!-- Replace this emoji with your image -->
+                    <img src="/images/gambo.jpg" alt="Your Name" class="w-full h-full object-cover rounded-3xl" />
+                </div>
             </div>
           </div>
         </div>
@@ -146,6 +146,7 @@
         </div>
       </section>
 
+<Skills/>
       <!-- Projects Section -->
       <section id="projects" class="py-32 px-6 relative">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
@@ -179,14 +180,29 @@
               </p>
             </div>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <a href="mailto:hatta@example.com" class="group flex items-center space-x-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:scale-105 transition-transform duration-300">
-                <span class="text-xl">📧</span>
-                <span>hatta@example.com</span>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <!-- Email Button -->
+              <a href="mailto:hattarahman1@gmail.com" class="group flex items-center space-x-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:scale-105 transition-transform duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                <span>Email</span>
               </a>
 
-              <a href="/resume.pdf" download class="group flex items-center space-x-3 px-6 py-3 rounded-full border border-purple-500/50 text-purple-200 hover:bg-purple-500/20 transition-all duration-300 backdrop-blur-sm">
-                <span class="text-xl">📄</span>
+              <!-- LinkedIn Button -->
+              <a href="https://www.linkedin.com/in/Hatta-Rahman" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-3 px-6 py-3 rounded-full border border-purple-500/50 text-purple-300 hover:bg-purple-500/10 transition-all duration-300 backdrop-blur-sm">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <!-- Resume Button -->
+              <a href="/resume.pdf" download class="group flex items-center space-x-3 px-6 py-3 rounded-full border border-purple-500/50 text-purple-300 hover:bg-purple-500/10 transition-all duration-300 backdrop-blur-sm">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
                 <span>Download Resume</span>
               </a>
             </div>
@@ -210,6 +226,7 @@
 <script setup>
 import Overlay from '@/Components/Overlay.vue'
 import ProjectCards from '@/Components/ProjectCards.vue'
+import Skills from '@/Components/Skills.vue'
 import PortfolioLayout from '@/Layouts/AppLayout.vue'
 import gsap from 'gsap'
 import { onMounted } from 'vue'
@@ -358,4 +375,36 @@ video {
   min-width: 100%;
   min-height: 100%;
 }
+
+        .expertise-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #6b46c1, #ec4899);
+            border-radius: 2px;
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover .expertise-bar {
+            transform: scaleX(1.1);
+        }
+
+        .skill-image {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .skill-image-placeholder {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
 </style>
