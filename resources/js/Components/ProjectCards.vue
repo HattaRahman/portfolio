@@ -29,7 +29,7 @@ import { onMounted, ref } from 'vue'
 const projects = [
   {
     id: 1,
-    title: 'E-Invoicing System',
+    title: 'E-Invoice System',
     description: 'A modern system to manage and send invoices efficiently.',
     tags: ['Laravel', 'Vue', 'MySQL'],
   },
@@ -51,7 +51,7 @@ const projectRefs = ref([])
 
 onMounted(() => {
   projectRefs.value.forEach((el, i) => {
-    const delay = i * 0.3
+    const delay = i * 0.6
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {

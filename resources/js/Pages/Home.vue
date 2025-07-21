@@ -141,6 +141,7 @@
                       <span class="px-3 py-1 rounded-full bg-pink-500/30 text-pink-200 text-sm">Vue.js</span>
                       <span class="px-3 py-1 rounded-full bg-blue-500/30 text-blue-200 text-sm">Full-Stack</span>
                     </div>
+                    <ProjectCards />
                   </div>
                 </div>
               </div>
