@@ -35,19 +35,22 @@
               HATTA
             </h1>
             <p class="text-2xl md:text-3xl text-gray-100 font-light drop-shadow-lg">
-              Hatta budak baik, tolong jangan ganggu dia
+              Mohamad Hatta Rahman Bin Borhanuddin
             </p>
           </div>
 
           <div class="flex flex-wrap justify-center gap-4 text-sm">
             <span class="px-4 py-2 rounded-full bg-purple-500/30 text-purple-200 border border-purple-500/50 backdrop-blur-sm">
-              Laravel
+              Frontend Developer
             </span>
             <span class="px-4 py-2 rounded-full bg-pink-500/30 text-pink-200 border border-pink-500/50 backdrop-blur-sm">
-              Vue.js
+              UI/UX Designer
             </span>
             <span class="px-4 py-2 rounded-full bg-blue-500/30 text-blue-200 border border-blue-500/50 backdrop-blur-sm">
-              Full-Stack
+              Data Analyst
+            </span>
+            <span class="px-4 py-2 rounded-full bg-green-500/30 text-green-200 border border-green-500/50 backdrop-blur-sm">
+              Software Analyst
             </span>
           </div>
 
@@ -131,7 +134,7 @@
                     <h3 class="text-2xl font-bold text-white mb-2">Internship at Salihin IT Curation</h3>
                     <p class="text-purple-400 mb-4">Full-Stack Developer Intern</p>
                     <p class="text-gray-200 leading-relaxed">
-                      Gained hands-on experience in full-stack development using Laravel and Vue.js. Worked on real-world projects, collaborating with experienced developers and contributing to production applications.
+                      Gained hands-on experience in full-stack development using Laravel, CodeIgniter3 and Vue.js. Worked on real-world projects, collaborating with experienced developers and contributing to production applications. Assisted in developing and optimizing web applications. Helped resolve technical issues with databases, APIs, and UI components.
                     </p>
                     <div class="mt-6 flex flex-wrap gap-2">
                       <span class="px-3 py-1 rounded-full bg-purple-500/30 text-purple-200 text-sm">Laravel</span>
