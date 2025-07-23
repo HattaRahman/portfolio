@@ -4,42 +4,50 @@
     <header class="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
       <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         <!-- Logo/Brand -->
+        <div class="text-xl font-bold text-white">
+          HATTA
+        </div>
 
+        <!-- Right Side Container -->
+        <div class="flex items-center gap-8">
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex gap-8 font-medium">
+            <a
+              @click="handleNavClick('about', $event)"
+              href="#about"
+              :class="activeSection === 'about' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
+              class="transition-all duration-300 pb-1"
+            >
+              About
+            </a>
+            <a
+              @click="handleNavClick('experience', $event)"
+              href="#experience"
+              :class="activeSection === 'experience' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
+              class="transition-all duration-300 pb-1"
+            >
+              Experience
+            </a>
+            <a
+              @click="handleNavClick('projects', $event)"
+              href="#projects"
+              :class="activeSection === 'projects' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
+              class="transition-all duration-300 pb-1"
+            >
+              Projects
+            </a>
+            <a
+              @click="handleNavClick('contact', $event)"
+              href="#contact"
+              :class="activeSection === 'contact' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
+              class="transition-all duration-300 pb-1"
+            >
+              Contact
+            </a>
+          </nav>
 
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex gap-8 font-medium">
-          <a
-            href="#about"
-            :class="activeSection === 'about' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
-            class="transition-all duration-300 pb-1"
-          >
-            About
-          </a>
-          <a
-            href="#experience"
-            :class="activeSection === 'experience' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
-            class="transition-all duration-300 pb-1"
-          >
-            Experience
-          </a>
-          <a
-            href="#projects"
-            :class="activeSection === 'projects' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
-            class="transition-all duration-300 pb-1"
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            :class="activeSection === 'contact' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-300 hover:text-white'"
-            class="transition-all duration-300 pb-1"
-          >
-            Contact
-          </a>
-        </nav>
-
-        <!-- Theme Toggle & Menu -->
-        <div class="flex items-center gap-3 ml-auto">
+          <!-- Theme Toggle & Menu -->
+          <div class="flex items-center gap-3">
           <!-- Hamburger Menu -->
           <button
             @click="open = !open"
@@ -66,7 +74,7 @@
       >
         <div v-if="open" class="md:hidden bg-black/90 backdrop-blur-xl px-6 pt-4 pb-6 text-center border-t border-white/10">
           <a
-            @click="closeMenu"
+            @click="handleNavClick('about', $event)"
             href="#about"
             :class="activeSection === 'about' ? 'text-purple-400' : 'text-gray-300 hover:text-white'"
             class="block py-3 text-lg transition-colors duration-300"
@@ -74,7 +82,7 @@
             About
           </a>
           <a
-            @click="closeMenu"
+            @click="handleNavClick('experience', $event)"
             href="#experience"
             :class="activeSection === 'experience' ? 'text-purple-400' : 'text-gray-300 hover:text-white'"
             class="block py-3 text-lg transition-colors duration-300"
@@ -82,7 +90,7 @@
             Experience
           </a>
           <a
-            @click="closeMenu"
+            @click="handleNavClick('projects', $event)"
             href="#projects"
             :class="activeSection === 'projects' ? 'text-purple-400' : 'text-gray-300 hover:text-white'"
             class="block py-3 text-lg transition-colors duration-300"
@@ -90,7 +98,7 @@
             Projects
           </a>
           <a
-            @click="closeMenu"
+            @click="handleNavClick('contact', $event)"
             href="#contact"
             :class="activeSection === 'contact' ? 'text-purple-400' : 'text-gray-300 hover:text-white'"
             class="block py-3 text-lg transition-colors duration-300"
@@ -99,6 +107,7 @@
           </a>
         </div>
       </transition>
+      </div>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -139,12 +148,14 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const lightMode = ref(false)
 const open = ref(false)
 const currentYear = new Date().getFullYear()
 const activeSection = ref('about')
+
+let observer = null
 
 function toggleTheme() {
   lightMode.value = !lightMode.value
@@ -155,42 +166,115 @@ function closeMenu() {
   open.value = false
 }
 
-onMounted(() => {
+function handleNavClick(sectionId, event) {
+  event.preventDefault()
+
+  // Immediately update active section
+  activeSection.value = sectionId
+
+  // Close mobile menu
+  closeMenu()
+
+  // Find and scroll to target
+  const target = document.getElementById(sectionId)
+  if (target) {
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+
+  // Debug log
+  console.log('Active section set to:', sectionId)
+}
+
+function updateActiveSection() {
+  const sections = document.querySelectorAll('section[id]')
+  if (sections.length === 0) return
+
+  const scrollY = window.scrollY
+  const windowHeight = window.innerHeight
+
+  let currentSection = 'about' // default
+
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect()
+    const sectionTop = rect.top + scrollY
+    const sectionHeight = rect.height
+
+    // A section is active if the top of the section is above the middle of the viewport
+    // and the bottom is below the middle
+    if (scrollY + windowHeight / 2 >= sectionTop &&
+        scrollY + windowHeight / 2 < sectionTop + sectionHeight) {
+      currentSection = section.id
+    }
+  })
+
+  if (activeSection.value !== currentSection) {
+    activeSection.value = currentSection
+    console.log('Active section updated to:', currentSection)
+  }
+}
+
+function handleScroll() {
+  updateActiveSection()
+}
+
+onMounted(async () => {
+  // Wait for DOM to be ready
+  await nextTick()
+
   // Set initial dark theme
   document.documentElement.classList.add('dark')
 
-  // Intersection Observer for active section tracking
-  const sections = document.querySelectorAll('section[id]')
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activeSection.value = entry.target.id
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll, { passive: true })
+
+  // Setup intersection observer after a short delay to ensure sections exist
+  setTimeout(() => {
+    const sections = document.querySelectorAll('section[id]')
+    console.log('Found sections:', sections.length)
+
+    if (sections.length > 0) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          // Find the entry with the highest intersection ratio
+          let maxRatio = 0
+          let activeEntry = null
+
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+              maxRatio = entry.intersectionRatio
+              activeEntry = entry
+            }
+          })
+
+          if (activeEntry && maxRatio > 0.3) {
+            activeSection.value = activeEntry.target.id
+            console.log('Intersection observer updated active section to:', activeEntry.target.id)
+          }
+        },
+        {
+          threshold: [0.1, 0.3, 0.5, 0.7, 0.9],
+          rootMargin: '-100px 0px -100px 0px'
         }
-      })
-    },
-    {
-      threshold: 0.3,
-      rootMargin: '-20% 0px -20% 0px'
+      )
+
+      sections.forEach((section) => observer.observe(section))
+
+      // Set initial active section
+      updateActiveSection()
+    } else {
+      console.log('No sections found, using scroll-based detection only')
     }
-  )
+  }, 500) // Increased delay to ensure sections are loaded
+})
 
-
-  sections.forEach((section) => observer.observe(section))
-
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault()
-      const target = document.querySelector(this.getAttribute('href'))
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        })
-      }
-    })
-  })
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+  if (observer) {
+    observer.disconnect()
+  }
 })
 </script>
 

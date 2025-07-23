@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6"
   >
     <div
       v-for="(project, index) in projects"
@@ -8,6 +8,13 @@
       class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-xl transform transition-all duration-500 hover:scale-105 opacity-0 translate-y-10"
       :ref="el => projectRefs[index] = el"
     >
+      <!-- Project Image -->
+      <img
+        :src="project.image"
+        :alt="project.title"
+        class="w-full h-48 object-cover rounded-lg mb-4"
+      />
+
       <h3 class="text-xl font-semibold text-purple-300">{{ project.title }}</h3>
       <p class="mt-2 text-gray-200">{{ project.description }}</p>
       <div class="mt-4 flex flex-wrap gap-2">
@@ -31,19 +38,29 @@ const projects = [
     id: 1,
     title: 'E-Invoice System',
     description: 'A modern system to manage and send invoices efficiently.',
-    tags: ['Laravel', 'Vue', 'MySQL'],
+    tags: ['CodeIgniter 3', 'MySQL', 'Documenting'],
+    image: '/images/Einvoice.png'
   },
   {
     id: 2,
-    title: 'UI/UX Coop Prototype',
+    title: 'Suruhanjaya Koperasi Malaysia System',
     description: 'Interactive UI design for cooperative systems.',
-    tags: ['Figma', 'UX Design'],
+    tags: ['CodeIgniter 3', 'MySQL', 'Full-Stack Development'],
+    image:'/images/SPK.png'
   },
   {
     id: 3,
-    title: 'Portfolio Website',
+    title: 'E-Recruitment System',
     description: 'One-page responsive site built with modern tools.',
-    tags: ['Laravel', 'Inertia', 'Tailwind'],
+    tags: ['Laravel', 'Vue.js', 'HeidiSQL'],
+    image: '/images/ERS.png'
+  },
+  {
+    id: 4,
+    title: 'Talenthub',
+    description: 'One-page responsive site built with modern tools.',
+    tags: ['CodeIgniter 3', 'HeidiSQL'],
+    image: '/images/Talenthub.png'
   },
 ]
 
