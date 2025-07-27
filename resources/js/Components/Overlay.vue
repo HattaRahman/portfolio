@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="overlay bg-purple-800 first"></div>
-    <div class="overlay bg-purple-700 second"></div>
-    <div class="overlay bg-purple-600 third"></div>
+    <div class="overlay bg-[#0a0612] first"></div>
+<div class="overlay bg-[#1a0d2e] second"></div>
+<div class="overlay bg-purple-900 third"></div>
   </div>
 </template>
 

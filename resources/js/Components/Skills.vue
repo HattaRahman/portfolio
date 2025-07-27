@@ -41,8 +41,10 @@
                 My <span class="text-purple-400">Skills</span>
             </h2>
             <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto"></div>
+            <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+              Here are some of the skills and tools I have experience with and actively use in my design and development work.
+            </p>
         </div>
-
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <!-- Java -->
             <div class="group relative skill-card">
@@ -74,9 +76,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-orange-400 transition-colors">HTML</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 75%;"></div>
+                                <div class="expertise-bar" style="width: 65%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">75%</span>
+                            <span class="text-xs text-gray-400 mt-1">65%</span>
                         </div>
                     </div>
                 </div>
@@ -93,9 +95,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">Tableau Desktop</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 50%;"></div>
+                                <div class="expertise-bar" style="width: 40%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">50%</span>
+                            <span class="text-xs text-gray-400 mt-1">40%</span>
                         </div>
                     </div>
                 </div>
@@ -112,9 +114,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">CSS</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 75%;"></div>
+                                <div class="expertise-bar" style="width: 65%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">75%</span>
+                            <span class="text-xs text-gray-400 mt-1">65%</span>
                         </div>
                     </div>
                 </div>
@@ -150,9 +152,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Flutterflow</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 90%;"></div>
+                                <div class="expertise-bar" style="width: 80%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">90%</span>
+                            <span class="text-xs text-gray-400 mt-1">80%</span>
                         </div>
                     </div>
                 </div>
@@ -207,9 +209,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Laravel</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 70%;"></div>
+                                <div class="expertise-bar" style="width: 60%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">70%</span>
+                            <span class="text-xs text-gray-400 mt-1">60%</span>
                         </div>
                     </div>
                 </div>
@@ -245,9 +247,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Firebase</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 55%;"></div>
+                                <div class="expertise-bar" style="width: 50%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">55%</span>
+                            <span class="text-xs text-gray-400 mt-1">50%</span>
                         </div>
                     </div>
                 </div>
@@ -321,9 +323,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Figma</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 90%;"></div>
+                                <div class="expertise-bar" style="width: 80%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">90%</span>
+                            <span class="text-xs text-gray-400 mt-1">80%</span>
                         </div>
                     </div>
                 </div>
@@ -397,9 +399,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Android Studio</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 60%;"></div>
+                                <div class="expertise-bar" style="width: 50%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">60%</span>
+                            <span class="text-xs text-gray-400 mt-1">50%</span>
                         </div>
                     </div>
                 </div>
@@ -416,9 +418,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Unity</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 75%;"></div>
+                                <div class="expertise-bar" style="width: 65%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">75%</span>
+                            <span class="text-xs text-gray-400 mt-1">65%</span>
                         </div>
                     </div>
                 </div>
@@ -435,9 +437,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Visual Studio Code</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 80%;"></div>
+                                <div class="expertise-bar" style="width: 70%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">80%</span>
+                            <span class="text-xs text-gray-400 mt-1">70%</span>
                         </div>
                     </div>
                 </div>
@@ -454,9 +456,9 @@
                         <div class="text-center w-full">
                             <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Microsoft Powerpoint</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 85%;"></div>
+                                <div class="expertise-bar" style="width: 80%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">85%</span>
+                            <span class="text-xs text-gray-400 mt-1">80%</span>
                         </div>
                     </div>
                 </div>
@@ -481,20 +483,20 @@
                 </div>
             </div>
 
-            <!-- C -->
+            <!-- Canva -->
             <div class="group relative skill-card">
                 <div class="bg-gray-800/70 backdrop-blur-sm rounded-xl p-4 border border-gray-700/50 group-hover:border-purple-500/50 group-hover:bg-gray-700/80 transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-purple-500/20">
                     <div class="flex flex-col items-center space-y-3">
                         <!-- Replace src with your actual image path -->
-                        <img src="images/C.png" alt="C#" class="skill-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="images/Canva.png" alt="C#" class="skill-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="skill-image-placeholder" style="display: none;">C#</div>
 
                         <div class="text-center w-full">
-                            <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">C</h3>
+                            <h3 class="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">Canva</h3>
                             <div class="mt-2 w-full bg-gray-700 rounded-full h-1">
-                                <div class="expertise-bar" style="width: 10%;"></div>
+                                <div class="expertise-bar" style="width: 80%;"></div>
                             </div>
-                            <span class="text-xs text-gray-400 mt-1">10%</span>
+                            <span class="text-xs text-gray-400 mt-1">80</span>
                         </div>
                     </div>
                 </div>
